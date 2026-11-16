@@ -1,0 +1,444 @@
+
+:root {
+  --bg-lilac: #f0eaf9;
+  --bg-soft: #faf9fc;
+  --text-dark: #26212e;
+  --text-mid: #585260;
+  --text-muted: #766d81;
+  --purple: #7952af;
+  --border: #e6dfed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #ffffff;
+  color: var(--text-dark);
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  border: 1px solid #ddd;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-size: 200% 200%;
+  background-color: #481294;
+  
+}
+
+
+.hamburger-menu a,
+.hamburger-menu span {
+  font-size: 16px;
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--bg-lilac);
+  flex-shrink: 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.brand-logo {
+  display: block;
+  width: 42px;
+  height: 42px;
+}
+
+.brand-name {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 36px;
+  min-width: 0;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 0;
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-btn[aria-current="page"] {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.nav-btn:hover {
+  color: var(--purple);
+}
+
+.search-wrap {
+  position: relative;
+  width: 238px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-wrap input {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px 0 46px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--text-dark);
+  font: inherit;
+  font-size: 16px;
+}
+
+.search-wrap input::placeholder {
+  color: var(--text-muted);
+}
+
+.brand:focus-visible,
+.nav-btn:focus-visible,
+.search-wrap input:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 4px;
+}
+
+.hamburger {
+  display: none;
+  height: 32px;
+  background: transparent;
+  margin-left: auto;
+}
+
+.hamburgerbtn {
+  display: none;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hoofdpagina {
+  color: black;
+  text-decoration: none;
+  transition: border 0.3s ease;
+  white-space: nowrap;
+}
+
+.hoofdpagina:hover {
+  border-bottom: 2px solid blue;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 32px 20px;
+  background: var(--bg-soft);
+  color: var(--text-dark);
+}
+
+.titel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 28px;
+}
+
+.titel h1 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+main p {
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+  color: var(--text-mid);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+form label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+form input {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1.5px solid gray;
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--text-dark);
+  font: inherit;
+  font-size: 12px;
+}
+
+form input:focus {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+
+form input::placeholder {
+  color: var(--text-muted);
+}
+
+form input#bericht,
+form input.veld {
+  min-height: 90px;
+}
+
+#submitknop {
+  align-self: flex-start;
+  width: auto;
+  min-height: 44px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 5px;
+  background: var(--purple);
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#submitknop:hover {
+  background: #7952af;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  min-height: 105px;
+  padding: 20px 40px;
+  flex-shrink: 0;
+  background: var(--bg-lilac);
+  color: var(--text-dark);
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer-brand strong {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.footer-brand span {
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  margin: 0;
+}
+
+.footer-col dt {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.footer-col dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1000px) {
+  .site-header {
+    gap: 16px;
+  }
+
+  .top-nav {
+    gap: 18px;
+  }
+
+  .search-wrap {
+    width: 170px;
+  }
+
+  .brand-name {
+    font-size: 27px;
+  }
+
+  .site-footer {
+    gap: 20px;
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-header {
+    gap: 16px;
+    min-height: 80px;
+    padding: 16px 20px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 26px;
+  }
+
+  .top-nav {
+    display: none;
+  }
+
+  .hamburgerbtn {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    width: 32px;
+    object-fit: contain;
+  }
+
+  main {
+    padding: 24px 20px 32px;
+  }
+
+  .titel {
+    text-align: center;
+  }
+
+  .titel h1 {
+    font-size: 28px;
+  }
+
+  .titel p {
+    display: block;
+    font-size: 12px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  form input {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  form input#bericht,
+  form input.veld {
+    min-height: 100px;
+  }
+
+  #submitknop {
+    min-height: 44px;
+    padding: 0 20px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .hoofdpagina {
+    display: none;
+  }
+}
