@@ -1,0 +1,110 @@
+﻿<Page x:Class="schoolbeheer.Pages.Klassen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:schoolbeheer.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="500"
+      Title="Klassen" Background="#F1F5F9">
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Klas toevoegen"
+               FontSize="26"
+               FontWeight="Bold"
+               Margin="20,15,10,15"
+               Grid.Row="0"
+               VerticalAlignment="Center"/>
+
+        <ScrollViewer Grid.Row="1"
+                  VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Margin="15">
+
+            <Grid HorizontalAlignment="Stretch">
+                <StackPanel MaxWidth="650"
+                        HorizontalAlignment="Stretch"
+                        Margin="10">
+
+                    <TextBlock Text="Klasnaam"
+                           FontSize="16"
+                           Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="txtKlasnaam"
+                         Height="38"
+                         FontSize="18"
+                         VerticalContentAlignment="Center"
+                         Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Leerjaar"
+                           FontSize="16"
+                           Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="cmbLeerjaar"
+                          Height="38"
+                          FontSize="16"
+                          VerticalContentAlignment="Center"
+                          Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Opleiding"
+                           FontSize="16"
+                           Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="cmbOpleiding"
+                          Height="38"
+                          FontSize="16"
+                          VerticalContentAlignment="Center"
+                          Margin="0,0,0,15"/>
+
+                    <Button x:Name="btnVoegKlasToe"
+                        Content="Klas toevoegen"
+                        Height="40"
+                        FontSize="16"
+                        Margin="0,0,0,25"
+                        BorderBrush="#16A34A"
+                        BorderThickness="2"
+                        Click="btnVoegKlasToe_Click"/>
+
+                    <Separator Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Klas verwijderen"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,8"/>
+
+                    <TextBlock Text="Selecteer een klas om te verwijderen."
+                           FontSize="15"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,12"/>
+
+                    <ComboBox x:Name="cmbKlassen"
+                          Height="38"
+                          FontSize="16"
+                          VerticalContentAlignment="Center"
+                          Margin="0,0,0,15"
+                          DisplayMemberPath="VolledigeNaam"
+                          SelectedValuePath="KlasID"/>
+
+                    <Button x:Name="btnVerwijderKlas"
+                        Content="Klas verwijderen"
+                        Height="40"
+                        FontSize="16"
+                        BorderBrush="#DC2626"
+                        BorderThickness="2"
+                        Click="btnVerwijderKlas_Click"/>
+
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+
+</Page>

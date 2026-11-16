@@ -1,0 +1,112 @@
+﻿<Page x:Class="schoolbeheer.Pages.Docenten"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:schoolbeheer.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="500"
+      Title="Docenten" Background="#F1F5F9">
+
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Docent toevoegen"
+               FontSize="26"
+               FontWeight="Bold"
+               Margin="20,15,10,15"
+               Grid.Row="0"
+               VerticalAlignment="Center"/>
+
+        <ScrollViewer Grid.Row="1"
+                  VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Margin="15">
+
+            <Grid>
+                <StackPanel MaxWidth="850"
+                        HorizontalAlignment="Center"
+                        Margin="10">
+
+                    <TextBlock Text="Voornaam"
+                           FontSize="16"
+                           Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="txtVoornaam"
+                         Height="38"
+                         FontSize="15"
+                         VerticalContentAlignment="Center"
+                         Margin="0,0,0,12"/>
+
+                    <TextBlock Text="Achternaam"
+                           FontSize="16"
+                           Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="txtAchternaam"
+                         Height="38"
+                         FontSize="15"
+                         VerticalContentAlignment="Center"
+                         Margin="0,0,0,12"/>
+
+                    <TextBlock Text="E-mailadres"
+                           FontSize="16"
+                           Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="txtEmail"
+                         Height="38"
+                         FontSize="15"
+                         VerticalContentAlignment="Center"
+                         Margin="0,0,0,15"/>
+
+                    <Button x:Name="btnVoegDocentToe"
+                        Content="Docent toevoegen"
+                        Height="40"
+                        FontSize="16"
+                        Margin="0,0,0,25"
+                        BorderBrush="#16A34A"
+                        BorderThickness="2"
+                        Click="btnVoegDocentToe_Click"/>
+
+                    <Separator Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Docent verwijderen"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,8"/>
+
+                    <TextBlock Text="Selecteer een docent om te verwijderen."
+                           FontSize="15"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,12"/>
+
+                    <ComboBox x:Name="cmbDocenten"
+                          Height="38"
+                          FontSize="16"
+                          VerticalContentAlignment="Center"
+                          Margin="0,0,0,15"
+                          SelectedValuePath="DocentID"
+                          DisplayMemberPath="VolledigeNaam"/>
+
+                    <Button x:Name="btnVerwijderD"
+                        Content="Docent verwijderen"
+                        Height="40"
+                        FontSize="16"
+                        BorderBrush="#DC2626"
+                        BorderThickness="2"
+                        Click="btnVerwijderD_Click_1"/>
+
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+
+
+</Page>
