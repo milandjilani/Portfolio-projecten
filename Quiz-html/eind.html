@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="eind.css">
+</head>
+<body>
+    <div id="parent">
+        <header>
+            <div class="text">
+                <h1>Welkom bij de Quiz</h1>
+                <p>Selecteer hoeveel vragen je wilt, je kan kiezen uit maximaal 20 vragen:</p>
+            </div>
+
+            <div >
+                 <Input id="invoerbox" type="number"></Input>
+                 <button onclick="quiz()">Start Quiz</button>
+            </div>
+        </header>
+
+        <main>
+
+            <div>
+                <label for="vraag">Jouw vragen zijn</label>
+                <textarea id="vraag" rows="4" cols="40"></textarea>
+                
+                <div id="opties"></div>
+            </div>
+            <div>
+                <input type="number" id="result" placeholder="Jouw score:" >
+                <div id="hier">
+                    
+
+                </div>
+                
+            </div>
+            <div id="timerbox">
+                10
+            </div>
+
+           
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+<script src="eind.js"></script>
+</html>

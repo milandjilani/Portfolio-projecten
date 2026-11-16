@@ -1,0 +1,181 @@
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+#parent{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    
+
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+header{
+    height: 30vh;
+    background-color: rgb(78, 115, 115);
+}
+
+.text{
+
+    text-align: center;
+
+ 
+}
+
+
+#invoerbox{
+    height: 1.5em;
+    border: 1.5px solid black;
+    border-radius: 1.5em;
+    
+}
+
+#invoerbox:hover{
+    border-color: aqua;
+    border: 2px solid aqua
+    
+}
+
+header div:nth-child(2){
+    text-align: center;
+   
+
+}
+
+Button{
+    background-color: beige;
+   
+
+}
+
+Button:hover{
+    transition: 0.5s ease;
+    transform: scale(1.05);
+
+
+   background-image:
+   linear-gradient(45deg, 
+    hwb(198 7% 6%), 
+    hsl(120 54% 70%));;
+}
+
+#hier{
+    background-color: aqua;
+}
+
+
+
+
+
+
+
+
+
+
+main{
+    height: 80vh;
+    background-image: linear-gradient(45deg, rgb(33, 74, 177), rgb(0, 179, 255), rgb(5, 17, 26));
+    background-size: 200% 200%;
+
+}
+
+main:hover {
+    animation: gradientMove 1s ease-out infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+    
+    
+}
+
+
+main:hover {
+    background-position: 100% 0;
+}
+
+
+
+main div{
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;   
+    gap: 0.5em;
+    
+    
+}
+
+main div #vraag{
+
+   width: 30rem;
+   height: 6rem;
+   text-align: center;
+   background-color: white;
+   color: black;
+   
+   
+  
+   
+   
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;  
+    width: 8em;
+    height: 1.5em;
+    
+    text-align: center;
+
+    
+    
+    
+}
+
+#opties{
+   
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+#timerbox{
+
+    height: 3em;
+    font-size: 45px;
+}
+
+
+
+
+footer{
+    height: 20vh ;
+    background-color: rgb(78, 115, 115);
+}
+
