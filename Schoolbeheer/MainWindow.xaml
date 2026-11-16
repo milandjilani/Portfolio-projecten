@@ -1,0 +1,36 @@
+﻿<Window x:Class="schoolbeheer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:schoolbeheer"
+        mc:Ignorable="d"
+        Title="Schoolbeheer" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Border Background="#172554"/>
+        <Frame x:Name="Mainframe" NavigationUIVisibility="Hidden" Background="#F1F5F9" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Frame>
+
+
+        
+        <StackPanel Orientation="Vertical" Margin="20">
+            <Label Content="ROC ter AA" FontSize="25" FontWeight="DemiBold" Foreground="White" HorizontalAlignment="Left" BorderBrush="Transparent" Background="Transparent"/>
+            <Button Content="Vakken toevoegen" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="vakklik" Foreground="WhiteSmoke"/>
+            <Button Content="Studenten toevoegen" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="studentklik" Foreground="WhiteSmoke"/>
+            <Button Content="Docenten toevoegen" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="docentklik" Foreground="WhiteSmoke"/>
+            <Button Content="Klas toevoegen" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="klasklik" Foreground="WhiteSmoke"/>
+            <Button Content="Docent aan klas toevoegen" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="voegklik" Foreground="WhiteSmoke"/>
+            <Button Content="Student aan vak koppelen" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="koppelklik" Foreground="WhiteSmoke"/>
+            <Button Content="Update Leerlingregister" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="Leerlingklik" Foreground="WhiteSmoke"/>
+            <Button Content="Update Docentregister" Background="Transparent" FontSize="15" HorizontalAlignment="Left" BorderBrush="Transparent" Click="Docentenklik" Foreground="WhiteSmoke"/>
+
+
+
+        </StackPanel>
+        
+    </Grid>
+</Window>
