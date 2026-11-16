@@ -1,0 +1,25 @@
+﻿<Window x:Class="ideavoorstel_auto_lease.Paginas.LeaseEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ideavoorstel_auto_lease.Paginas"
+        mc:Ignorable="d"
+        Title="LeaseEditWindow" Height="250" Width="400">
+    <Grid>
+        <StackPanel Margin="20">
+
+            <TextBlock Text="Startdatum:"/>
+            <DatePicker x:Name="dpStart" Margin="0 0 0 10"/>
+
+            <TextBlock Text="Einddatum:"/>
+            <DatePicker x:Name="dpEind" Margin="0 0 0 20"/>
+
+            <Button Content="Update"
+                Width="120"
+                HorizontalAlignment="Left"
+                Click="btnUpdate_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
